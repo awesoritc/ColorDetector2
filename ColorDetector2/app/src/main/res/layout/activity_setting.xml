@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<TextView
+                android:id="@+id/filename_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ファイル名"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/filename_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="textPersonName" />-->
+
+            <TextView
+                android:id="@+id/border_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="白黒の境界値(0~255)"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/border_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/interval_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="シャッター間隔を指定(ミリ秒)"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/interval_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/x_pos_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="x座標(横:上から下に0~639)"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/x_pos_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="4"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/y_pos_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="y座標(右から左に0~479)"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/y_pos_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="4"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/use5points_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5つの地点の色を使う"
+                android:textSize="20sp"/>
+
+            <Switch
+                android:id="@+id/use5points_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/random_points_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ランダムな地点を利用する"
+                android:textSize="20sp"/>
+
+
+            <Switch
+                android:id="@+id/random_points_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/print_rgb_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RGBを出力する"
+                android:textSize="20sp"/>
+
+
+            <Switch
+                android:id="@+id/print_rgb_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/format_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="フォーマット"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/format_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="25"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/done_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="設定を登録"
+        android:textSize="25sp"/>
+
+
+</LinearLayout>
