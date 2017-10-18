@@ -34,15 +34,6 @@ public class Util {
 
 
     public static void writeMsg(Context context, String msg, String filename){
-        /*BufferedWriter bufferedWriter = null;
-        OutputStream out;
-
-        try{
-            out = context.openFileOutput(filename, Context.MODE_APPEND);
-            PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(out, "UTF-8"));
-            printWriter.append(msg);
-            printWriter.close();
-            //Toast.makeText(context, "success", Toast.LENGTH_SHORT).show();*/
 
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) { //マウントされているか
@@ -67,11 +58,6 @@ public class Util {
 
             Toast.makeText(context, "書き込み不可", Toast.LENGTH_SHORT).show();
         }
-        /*} catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }*/
     }
 
 
@@ -109,25 +95,6 @@ public class Util {
 
 
 
-    public static boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-    /* Checks if external storage is available to at least read */
-    public static boolean isExternalStorageReadable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-
     public static Bitmap getBitmapImageFromYUV(byte[] data, int width, int height) {
         YuvImage yuvimage = new YuvImage(data, ImageFormat.NV21, width, height, null);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -162,6 +129,4 @@ public class Util {
             return 255;
         }
     }
-
-
 }
