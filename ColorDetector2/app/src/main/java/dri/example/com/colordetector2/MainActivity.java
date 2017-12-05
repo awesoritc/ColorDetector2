@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     // FrameLayout に CameraPreview クラスを設定
-                    preview = (SurfaceView) findViewById(R.id.preview);
+                    //preview = (SurfaceView) findViewById(R.id.preview);
                     preview.setVisibility(View.VISIBLE);
 
                     SurfaceHolder holder = preview.getHolder();
@@ -239,8 +239,8 @@ public class MainActivity extends AppCompatActivity {
             if(use5points) {
                 //5箇所をとるパターン
 
-                int[] points_width = {100, 100, 600, 600, 300};
-                int[] points_height = {100, 450, 100, 450, 280};
+                int[] points_width = {10, 320, 360, 10, 320};
+                int[] points_height = {240, 240, 360, 470, 470};
 
                 if (randomPoints) {
                     //範囲内でランダムな5箇所を取得
@@ -286,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
                     selected_color = rgb[3];
 
                 }
-                if (black_counter >= 3) {
+                if (black_counter >= 2) {
                     tmp = "0," + Util.getTimeStamp(format);
                 } else {
                     tmp = "255," + Util.getTimeStamp(format);
